@@ -63,6 +63,20 @@ if (Number.prototype.toDegrees === undefined) {
 
 var partnerMap;
 var setCoords = [];
+var colors = ["#ce9f9b",
+"#823f33",
+"#d6593c",
+"#cdb650",
+"#546c3b",
+"#81d154",
+"#88d2a9",
+"#75abc1",
+"#8f85ce",
+"#4e2e77",
+"#9549d0",
+"#413542",
+"#ca4f91"];
+
 $(document).ready(function() {
     // jQuery code goes here
 	partnerMap = $('#map').vectorMap({
@@ -117,22 +131,22 @@ $(document).ready(function() {
 			attribute: 'fill',
 			values: plants.reduce(function(p, c, i){ p[i] = c.partner[0]; return p }, {}),
 			scale: {
-				'CO2Net+': '#c28579',
+				'CO2Net+': colors[0],
 				
-				'CORAL': '#bf4931',
-				'CO2-Selekt': '#c69b40',
-				'TherMemPlus': '#4f592d',
+				'CORAL': colors[1],
+				'CO2-Selekt': colors[2],
+				'TherMemPlus': colors[3],
 				
-				'Dream Resource': '#76b845',
-				'CO2Form': '#70b087',
-				'CO2Lubricants': '#5b9abb',
-				'OptiMeOH': '#5346af',
+				'Dream Resource': colors[4],
+				'CO2Form': colors[5],
+				'CO2Lubricants': colors[6],
+				'OptiMeOH': colors[7],
 				
-				'PROPHECY': '#ac8dc7',
-				'BioElectroPlast': '#bc4dcb',
-				'MIKE': '#472c43',
-				'CarbonCat': '#863467',
-				'eEthylen': '#db4c87',
+				'PROPHECY': colors[8],
+				'BioElectroPlast': colors[9],
+				'MIKE': colors[10],
+				'CarbonCat': colors[11],
+				'eEthylen': colors[12],
 			},
 			legend: {
 			  vertical: true,
