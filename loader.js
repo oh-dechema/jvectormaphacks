@@ -58,7 +58,7 @@ $(document).ready(function() {
 		backgroundColor: 'transparent',
 		regionStyle: {
 			initial: {
-				fill: 'rgba(0, 130, 121, 0.2)',
+				fill: 'rgba(170, 180, 180, 0.2)',
 				"fill-opacity": 1,
 				stroke: 'none',
 				"stroke-width": 0,
