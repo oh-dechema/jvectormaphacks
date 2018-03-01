@@ -51,6 +51,16 @@ var plants = [
 	{name: 'Fraunhofer ICT-IMM', coords: [49.96191,8.2577114], coordinator: 'CarbonCat', partner: ['CarbonCat']},
 	{name: 'Julius-Maximilians-Universität Würzburg - Fakultät für Chemie und Pharmazie - Institut für Organische Chemie', coords: [49.7804649,9.9668576], partner: ['CarbonCat']},
   ];
+/** Extend Number object with method to convert numeric degrees to radians */
+if (Number.prototype.toRadians === undefined) {
+    Number.prototype.toRadians = function() { return this * Math.PI / 180; };
+}
+
+/** Extend Number object with method to convert radians to numeric (signed) degrees */
+if (Number.prototype.toDegrees === undefined) {
+    Number.prototype.toDegrees = function() { return this * 180 / Math.PI; };
+}
+
 var partnerMap;
 var setCoords = [];
 $(document).ready(function() {
