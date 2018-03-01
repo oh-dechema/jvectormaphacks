@@ -70,19 +70,20 @@ $(document).ready(function() {
 		regionStyle: {
 			initial: {
 				fill: 'rgba(170, 180, 180, 0.1)',
-				"fill-opacity": 1,
+				fill-opacity: 1,
 				stroke: 'rgb(120, 120, 120)',
-				"stroke-width": 0.5,
-				"stroke-opacity": 1
+				stroke-width: 0.5,
+				stroke-opacity: 1
 			  }
 		},
 		markerStyle: {
 			initial: {
-				"fill-opacity": 0.75,
-				"stroke-width": 0.3
+				stroke-width: 0.3,
+				stroke: 'rgb(20, 20, 20)',
 			  },
 			  hover: {
-				"fill-opacity": 0.9,
+				fill-opacity: 0.9,
+				r: 10,
 				cursor: 'pointer'
 			  },
 		},
