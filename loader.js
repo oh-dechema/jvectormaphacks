@@ -58,10 +58,10 @@ $(document).ready(function() {
 		backgroundColor: 'transparent',
 		regionStyle: {
 			initial: {
-				fill: 'rgba(170, 180, 180, 0.2)',
+				fill: 'rgba(170, 180, 180, 0.1)',
 				"fill-opacity": 1,
-				stroke: 'none',
-				"stroke-width": 0,
+				stroke: 'rgb(100, 100, 100)',
+				"stroke-width": 1,
 				"stroke-opacity": 1
 			  }
 		},
