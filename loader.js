@@ -79,7 +79,6 @@ $(document).ready(function() {
 		markerStyle: {
 			initial: {
 				stroke-width: 0.3,
-				stroke: 'rgb(20, 20, 20)',
 			  },
 			  hover: {
 				fill-opacity: 0.9,
