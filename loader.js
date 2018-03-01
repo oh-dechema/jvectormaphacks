@@ -54,7 +54,7 @@ var plants = [
 var partnerMap;
 $(document).ready(function() {
     // jQuery code goes here
-	partnerMap = $('#world-map').vectorMap({
+	partnerMap = $('#map').vectorMap({
 		backgroundColor: 'transparent',
 		regionStyle: {
 			initial: {
