@@ -63,19 +63,19 @@ if (Number.prototype.toDegrees === undefined) {
 
 var partnerMap;
 var setCoords = [];
-var colors = ["#ce9f9b",
-"#823f33",
-"#d6593c",
-"#cdb650",
-"#546c3b",
-"#81d154",
-"#88d2a9",
-"#75abc1",
-"#8f85ce",
-"#4e2e77",
-"#9549d0",
-"#413542",
-"#ca4f91"];
+var colors = ["#ff9f91",
+"#490c00",
+"#ffb931",
+"#2f3600",
+"#cbffa7",
+"#289500",
+"#d4f8ff",
+"#001822",
+"#001f57",
+"#ad75ff",
+"#eacbff",
+"#610066",
+"#af0061"];
 
 $(document).ready(function() {
     // jQuery code goes here
