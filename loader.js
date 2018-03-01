@@ -103,8 +103,7 @@ $(document).ready(function() {
 					Math.sin(Δλ/2) * Math.sin(Δλ/2);
 				var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 				var d = R * c;
-				console.log(d);
-				if(d<4000){
+				if(d<10000){
 					lat1 = lat1 + 0.02;
 					i = 0;
 				}
