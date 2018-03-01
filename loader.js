@@ -54,8 +54,7 @@ var plants = [
 var partnerMap;
 $(document).ready(function() {
     // jQuery code goes here
-	partnerMap = new jvm.Map({
-		container: $('#map'),
+	partnerMap = $('#world-map').vectorMap({
 		backgroundColor: 'transparent',
 		regionStyle: {
 			initial: {
