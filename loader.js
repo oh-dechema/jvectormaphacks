@@ -104,8 +104,8 @@ $(document).ready(function() {
 				var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 				var d = R * c;
 				console.log(d);
-				if(d<2000){
-					lat1 = lat1 + 0.1;
+				if(d<4000){
+					lat1 = lat1 + 0.02;
 					i = 0;
 				}
 			}
