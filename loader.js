@@ -83,23 +83,22 @@ $(document).ready(function() {
 			attribute: 'fill',
 			values: plants.reduce(function(p, c, i){ p[i] = c.partner[0]; return p }, {}),
 			scale: {
-				'CO2Net+': '#ff9b71',
+				'CO2Net+': '#c28579',
 				
-				'CORAL': '#2c2c2b',
-				'CO2-Selekt': '#605f5e',
-				'TherMemPlus': '#a8a7a7',
+				'CORAL': '#bf4931',
+				'CO2-Selekt': '#c69b40',
+				'TherMemPlus': '#4f592d',
 				
-				'Dream Resource': '#8c8b47',
-				'CO2Form': '#bab95f',
-				'CO2Lubricants': '#fffd82',
-				'OptiMeOH': '#fffda4',
+				'Dream Resource': '#76b845',
+				'CO2Form': '#70b087',
+				'CO2Lubricants': '#5b9abb',
+				'OptiMeOH': '#5346af',
 				
-				'PROPHECY': '#003c37',
-				'BioElectroPlast': '#005f59',
-				'MIKE': '#008279',
-				'CarbonCat': '#2e9891',
-				'eEthylen': '#5cafa9',
-				
+				'PROPHECY': '#ac8dc7',
+				'BioElectroPlast': '#bc4dcb',
+				'MIKE': '#472c43',
+				'CarbonCat': '#863467',
+				'eEthylen': '#db4c87',
 			},
 			legend: {
 			  vertical: true,
