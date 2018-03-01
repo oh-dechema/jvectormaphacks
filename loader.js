@@ -69,21 +69,21 @@ $(document).ready(function() {
 		backgroundColor: 'transparent',
 		regionStyle: {
 			initial: {
-				fill: 'rgba(170, 180, 180, 0.1)',
-				fill-opacity: 1,
-				stroke: 'rgb(120, 120, 120)',
-				stroke-width: 0.5,
-				stroke-opacity: 1
+				"fill": 'rgba(170, 180, 180, 0.1)',
+				"fill-opacity": 1,
+				"stroke": 'rgb(120, 120, 120)',
+				"stroke-width": 0.5,
+				"stroke-opacity": 1
 			  }
 		},
 		markerStyle: {
 			initial: {
-				stroke-width: 0.3,
+				"stroke-width": 0.3,
 			  },
 			  hover: {
-				fill-opacity: 0.9,
-				r: 10,
-				cursor: 'pointer'
+				"fill-opacity": 0.9,
+				"r": 10,
+				"cursor": 'pointer'
 			  },
 		},
 		map: 'de_merc',
