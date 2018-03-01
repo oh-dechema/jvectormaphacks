@@ -60,8 +60,8 @@ $(document).ready(function() {
 			initial: {
 				fill: 'rgba(170, 180, 180, 0.1)',
 				"fill-opacity": 1,
-				stroke: 'rgb(100, 100, 100)',
-				"stroke-width": 1,
+				stroke: 'rgb(120, 120, 120)',
+				"stroke-width": 0.5,
 				"stroke-opacity": 1
 			  }
 		},
