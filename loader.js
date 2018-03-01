@@ -88,13 +88,13 @@ $(document).ready(function() {
 		},
 		map: 'de_merc',
 		markers: plants.map(function(h){
-			const lat1 = h.coords[0],
-			      lon1 = h.coords[1],
-			      R = 6371e3, // metres
-			      φ1 = lat1.toRadians();
+			var lat1 = h.coords[0],
+			    lon1 = h.coords[1];
+			const R = 6371e3; // metres
 			for(let i=0;i<setCoords.length;i++){
 				const lat2 = setCoords[i][0],
 				      lon2 = setCoords[i][1],
+				      φ1 = lat1.toRadians(),
 				      φ2 = lat2.toRadians(),
 				      Δφ = (lat2-lat1).toRadians(),
 				      Δλ = (lon2-lon1).toRadians();
@@ -105,12 +105,12 @@ $(document).ready(function() {
 				var d = R * c;
 				console.log(d);
 				if(d<2000){
-					h.coords[0] = h.coords[0] + 0.1;
+					lat1 = lat1 + 0.1;
 					i = 0;
 				}
 			}
-			setCoords.push(h.coords);
-			return {name: h.name, latLng: h.coords}
+			setCoords.push([lat1, lon1]);
+			return {name: h.name, latLng: [lat1, lon1]}
 		}),
 		series: {
 		  markers: [
