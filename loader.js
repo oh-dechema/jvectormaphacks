@@ -61,6 +61,8 @@ if (Number.prototype.toDegrees === undefined) {
     Number.prototype.toDegrees = function() { return this * 180 / Math.PI; };
 }
 
+var spaceMarkers = true;
+
 var partnerMap;
 var setCoords = [];
 var colors = ["#ff9f91",
@@ -76,6 +78,31 @@ var colors = ["#ff9f91",
 "#eacbff",
 "#610066",
 "#af0061"];
+
+function spaceMarker(h){	
+	let lat1 = h.coords[0],
+	    lon1 = h.coords[1];
+	const R = 6371e3; // metres
+	for(let i=0;i<setCoords.length;i++){
+		const lat2 = setCoords[i][0],
+		      lon2 = setCoords[i][1],
+		      φ1 = lat1.toRadians(),
+		      φ2 = lat2.toRadians(),
+		      Δφ = (lat2-lat1).toRadians(),
+		      Δλ = (lon2-lon1).toRadians();
+		var a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+			Math.cos(φ1) * Math.cos(φ2) *
+			Math.sin(Δλ/2) * Math.sin(Δλ/2);
+		var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+		var d = R * c;
+		if(d<10000){
+			lat1 = lat1 + 0.02;
+			i = 0;
+		}
+	}
+	setCoords.push([lat1, lon1]);
+	return [lat1, lon1];
+}
 
 $(document).ready(function() {
     // jQuery code goes here
@@ -101,35 +128,18 @@ $(document).ready(function() {
 			  },
 		},
 		map: 'de_merc',
-		markers: plants.map(function(h){
-			var lat1 = h.coords[0],
-			    lon1 = h.coords[1];
-			const R = 6371e3; // metres
-			for(let i=0;i<setCoords.length;i++){
-				const lat2 = setCoords[i][0],
-				      lon2 = setCoords[i][1],
-				      φ1 = lat1.toRadians(),
-				      φ2 = lat2.toRadians(),
-				      Δφ = (lat2-lat1).toRadians(),
-				      Δλ = (lon2-lon1).toRadians();
-				var a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
-					Math.cos(φ1) * Math.cos(φ2) *
-					Math.sin(Δλ/2) * Math.sin(Δλ/2);
-				var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-				var d = R * c;
-				if(d<10000){
-					lat1 = lat1 + 0.02;
-					i = 0;
-				}
+		markers: plants.map(h => {
+			let hmod;
+			if (spaceMarkers) {
+				hmod = spaceMarker();
 			}
-			setCoords.push([lat1, lon1]);
-			return {name: h.name, latLng: [lat1, lon1]}
+			return {name: h.name, latLng: hmod}
 		}),
 		series: {
 		  markers: [
 			{
 			attribute: 'fill',
-			values: plants.reduce(function(p, c, i){ p[i] = c.partner[0]; return p }, {}),
+			values: plants.reduce((p, c, i) => { p[i] = c.partner[0]; return p }, {}),
 			scale: {
 				'CO2Net+': colors[0],
 				
@@ -155,7 +165,7 @@ $(document).ready(function() {
 		  },
 		  {
 			attribute: 'r',
-			values: plants.reduce(function(p, c, i){ p[i] = c.coordinator == undefined ? 'partner' : 'coordinator'; return p }, {}),
+			values: plants.reduce((p, c, i) => { p[i] = c.coordinator == undefined ? 'partner' : 'coordinator'; return p }, {}),
 			scale: {
 			  'coordinator': 7,
 			  'partner': 4,
