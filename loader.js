@@ -131,7 +131,7 @@ $(document).ready(function() {
 		markers: plants.map(h => {
 			let hmod;
 			if (spaceMarkers) {
-				hmod = spaceMarker();
+				hmod = spaceMarker(h);
 			}
 			return {name: h.name, latLng: hmod}
 		}),
