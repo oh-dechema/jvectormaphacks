@@ -173,6 +173,7 @@ $(document).ready(function() {
 			},
 			legend: {
 			  vertical: true,
+			  cssClass: 'legendWhite',
 			  labelRender: function(v){
 				return {
 				  'coordinator': 'Koordinator',
