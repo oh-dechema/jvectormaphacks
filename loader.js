@@ -188,7 +188,7 @@ $(document).ready(function() {
 		  }]
 		},
 		onMarkerTipShow: function(event, label, index){
-			var labelText = '<b>'+plants[index].name+'</b><br/>';
+			var labelText = '<b>'+plants[index].name+'</b><br>'+plants[index].contact+'<br><br>';
 			if(plants[index].coordinator != undefined){
 				labelText += "Koordinator von " + plants[index].coordinator + "<br/>";
 			}
