@@ -161,6 +161,7 @@ $(document).ready(function() {
 			legend: {
 			  vertical: true,
 			  title: 'Projekte',
+			  cssClass: 'legendWhite',
 			}
 		  },
 		  {
