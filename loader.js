@@ -1,6 +1,6 @@
 var plants = [
     {name: 'DECHEMA Gesellschaft für Chemische Technik und Biotechnologie e.V.', contact: 'Herr Dr.-Ing. Alexis Bazzanella', coords: [50.113176, 8.644545], coordinator: 'CO2Net+', partner: ['CO2Net+']},
-    {name: 'Universität Kassel - Center for Environmental Systems Research', contact: 'Herr Prof. Dr. Stefan Bringezu', coords: [51.322753, 9.507594], partner: ['CO2Net+']},
+    {name: 'Universität Kassel - Center for Environmental Systems Research', contact: 'Herr Prof. Dr. Stefan Bringezu', coords: [51.322753, 9.507594], partner: ['CO<sub></sub>2Net+']},
     {name: 'Institute for Advanced Sustainability Studies e.V.', contact: 'Frau Dr. Barbara Olfe-Kräutlein', coords: [52.406065, 13.073215], partner: ['CO2Net+']},
 	{name: 'Covestro Deutschland AG', contact: 'Herr Dr. Christoph Gürtler', coords: [51.368060, 6.662296], coordinator: 'Dream Resource', partner: ['Dream Resource']},
 	{name: 'Rheinisch-Westfälische Technische Hochschule Aachen - CAT Catalytic Center', contact: 'Herr Dr. Marcel Langer', coords: [50.780078, 6.065687], partner: ['Dream Resource']},
